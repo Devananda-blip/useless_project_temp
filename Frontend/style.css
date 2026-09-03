@@ -1,91 +1,399 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f1e8;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+font-family: Arial, sans-serif;
+min-height: 100vh;
+background: linear-gradient(135deg, #fff3b0, #ffd6e7, #c8f7ff);
+color: #222;
+overflow-x: hidden;
+}
+
+.rice-bg {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+font-size: 28px;
+opacity: 0.18;
+white-space: nowrap;
+pointer-events: none;
+padding: 15px;
 }
 
 .container {
-    width: 90%;
-    max-width: 700px;
-    text-align: center;
+width: 92%;
+max-width: 750px;
+margin: auto;
+padding: 45px 0;
+}
+
+.hero {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.logo {
+font-size: 65px;
+animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+0%, 100% {
+transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-12px);
+}
+
 }
 
 h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+font-size: 48px;
+font-weight: 900;
+letter-spacing: 3px;
+margin: 10px 0;
 }
 
-.container > p {
-    color: #666;
-    margin-bottom: 30px;
+.badge {
+display: inline-block;
+background: #222;
+color: white;
+padding: 8px 16px;
+border-radius: 30px;
+font-size: 13px;
+margin: 10px 0 20px;
 }
 
-.upload-box {
-    background: white;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+.tagline {
+font-size: 22px;
+font-weight: bold;
+line-height: 1.5;
 }
 
-.upload-box h2 {
-    margin-bottom: 10px;
+.subtext {
+margin-top: 15px;
+display: flex;
+justify-content: center;
+gap: 8px;
+flex-wrap: wrap;
+font-size: 14px;
+color: #555;
 }
 
-.upload-dialogue{
-    margin-bottom: 30px;
-    color:#777;
-    font-size: 15px;
+.subtext span {
+background: rgba(255,255,255,0.7);
+padding: 7px 12px;
+border-radius: 20px;
+}
+
+.card {
+background: rgba(255,255,255,0.92);
+border-radius: 28px;
+padding: 35px;
+margin-bottom: 25px;
+box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+border: 3px solid white;
+}
+
+.upload-card {
+text-align: center;
+}
+
+.upload-card h2 {
+font-size: 28px;
+margin-bottom: 8px;
+}
+
+.small-text {
+color: #777;
+margin-bottom: 25px;
 }
 
 input[type="file"] {
-    display: block;
-    margin: 0 auto 20px;
+display: none;
+}
+
+.upload-area {
+display: block;
+border: 3px dashed #aaa;
+border-radius: 22px;
+padding: 30px 20px;
+cursor: pointer;
+transition: 0.25s;
+background: #fffaf0;
+}
+
+.upload-area:hover {
+transform: scale(1.02);
+border-color: #222;
+}
+
+.upload-icon {
+font-size: 45px;
+margin-bottom: 10px;
+}
+
+.upload-area h3 {
+font-size: 21px;
+margin-bottom: 7px;
+}
+
+.upload-area p {
+color: #777;
+margin-bottom: 22px;
+}
+
+.choose-btn {
+display: inline-block;
+background: #222;
+color: white;
+padding: 12px 22px;
+border-radius: 12px;
+font-weight: bold;
+}
+
+.preview-container {
+margin-top: 20px;
 }
 
 #preview {
-    display: none;
-    width: 100%;
-    max-height: 300px;
-    object-fit: contain;
-    border-radius: 15px;
-    margin: 20px 0;
+display: none;
+max-width: 100%;
+max-height: 320px;
+border-radius: 18px;
+object-fit: contain;
 }
 
-button {
-    border: none;
-    padding: 14px 25px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    background: #222;
-    color: white;
+.count-btn,
+.again-btn {
+border: none;
+color: white;
+background: #ff4d6d;
+padding: 16px 28px;
+border-radius: 15px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 22px;
+box-shadow: 0 7px 0 #c93650;
+transition: 0.15s;
 }
 
-button:hover {
-    opacity: 0.8;
+.count-btn:hover,
+.again-btn:hover {
+transform: translateY(-2px);
 }
 
-.result {
-    margin-top: 25px;
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
+.count-btn:active,
+.again-btn:active {
+transform: translateY(5px);
+box-shadow: 0 2px 0 #c93650;
 }
 
-.result h2 {
-    margin-bottom: 10px;
+.hidden {
+display: none !important;
 }
 
-#count {
-    font-size: 20px;
-    font-weight: bold;
+.loading-card {
+text-align: center;
+}
+
+.loading-rice {
+font-size: 65px;
+animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+from {
+transform: rotate(0deg);
+}
+
+to {
+    transform: rotate(360deg);
+}
+
+}
+
+.loading-card h2 {
+margin: 15px 0 8px;
+}
+
+.loading-card p {
+color: #777;
+}
+
+.loader {
+width: 100%;
+height: 12px;
+background: #eee;
+border-radius: 20px;
+margin-top: 25px;
+overflow: hidden;
+}
+
+.loader-bar {
+height: 100%;
+width: 40%;
+background: #ff4d6d;
+border-radius: 20px;
+animation: loading 1.2s infinite;
+}
+
+@keyframes loading {
+0% {
+transform: translateX(-100%);
+}
+
+100% {
+    transform: translateX(300%);
+}
+
+}
+
+.result-card {
+text-align: center;
+}
+
+.result-emoji {
+font-size: 50px;
+}
+
+.result-label {
+font-size: 13px;
+letter-spacing: 2px;
+font-weight: bold;
+color: #777;
+margin-top: 8px;
+}
+
+.count-number {
+font-size: 90px;
+font-weight: 900;
+margin-top: 5px;
+line-height: 1;
+}
+
+.grain-label {
+font-weight: bold;
+letter-spacing: 2px;
+color: #777;
+}
+
+.divider {
+width: 70%;
+height: 2px;
+background: #eee;
+margin: 25px auto;
+}
+
+.dialogue-box {
+background: #fff4b8;
+border-radius: 20px;
+padding: 22px 35px;
+position: relative;
+}
+
+.dialogue-box p {
+font-size: 21px;
+font-weight: bold;
+line-height: 1.5;
+}
+
+.quote-mark {
+position: absolute;
+left: 12px;
+top: 5px;
+font-size: 45px;
+color: #ff4d6d;
+}
+
+.quote-mark.right {
+left: auto;
+right: 12px;
+top: auto;
+bottom: -10px;
+}
+
+.movie-ref {
+margin-top: 12px;
+color: #777;
+font-size: 13px;
+}
+
+.stats {
+display: flex;
+justify-content: center;
+gap: 15px;
+margin-top: 25px;
+flex-wrap: wrap;
+}
+
+.stat {
+background: #f4f4f4;
+padding: 15px 25px;
+border-radius: 16px;
+min-width: 150px;
+}
+
+.stat span {
+display: block;
+font-size: 25px;
+}
+
+.stat strong {
+display: block;
+margin-top: 5px;
+font-size: 18px;
+}
+
+.stat small {
+color: #777;
+}
+
+.wasted-message {
+margin-top: 20px;
+color: #777;
+font-size: 14px;
+}
+
+.again-btn {
+background: #222;
+box-shadow: 0 7px 0 #555;
+}
+
+footer {
+text-align: center;
+color: #666;
+font-size: 13px;
+line-height: 1.8;
+padding: 15px;
+}
+
+@media (max-width: 600px) {
+
+h1 {
+    font-size: 36px;
+}
+
+.container {
+    padding: 30px 0;
+}
+
+.card {
+    padding: 25px 18px;
+}
+
+.count-number {
+    font-size: 65px;
+}
+
+.dialogue-box p {
+    font-size: 18px;
+}
+
 }

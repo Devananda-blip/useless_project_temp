@@ -1,47 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Choru Count™ 🍚</title>
 
-    <title>Rice Grain Counter 🍚</title>
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
-</head>
+</head><body><div class="rice-bg">
+    🍚　🍚　🍚　🍚　🍚　🍚
+</div>
 
-<body>
+<main class="container">
 
-    <div class="container">
+    <div class="hero">
 
-        <h1>🍚 Rice Grain Counter</h1>
+        <div class="logo">🍚</div>
 
-        <p>Because counting rice manually is apparently too much work.</p>
+        <h1>CHORU COUNT™</h1>
 
-        <div class="upload-box">
-
-            <h2>Upload Your Rice Image</h2>
-
-            <p class="upload-dialogue">
-                Don't worry.We won't judge you for your rice.            </p>
-
-            <input type="file" id="imageInput" accept="image/*">
-
-            <img id="preview" alt="Rice Preview">
-
-            <button id="countBtn">
-                Count Rice Grains 🍚
-            </button>
-
+        <div class="badge">
+            ⚠️ Totally Unnecessary Technology
         </div>
 
-        <div class="result" id="result">
-            <h2>Result</h2>
-            <p id="count">Your rice grains are waiting...</p>
-        </div>
+        <p class="tagline">
+            Aarum chodichilla.<br>
+            Ennalum njangal undakki. 😭
+        </p>
+
+        <p class="subtext">
+            <span>“Chor undo?”</span>
+            <span>“Und.”</span>
+            <span>“Enna count cheyyam.” 🍚</span>
+        </p>
 
     </div>
 
-    <script src="script.js"></script>
+
+    <section class="card upload-card">
+
+        <h2>📸 Chorinte Photo Idu</h2>
+
+        <p class="small-text">
+            Pedikkanda... njangal judge cheyyilla. 👀
+        </p>
+
+        <label for="imageInput" class="upload-area">
+
+            <div class="upload-icon">📷</div>
+
+            <h3>Choose Your Chor</h3>
+
+            <p>Click here to upload a rice image</p>
+
+            <span class="choose-btn">
+                SELECT RICE 🍚
+            </span>
+
+        </label>
+
+        <input
+            type="file"
+            id="imageInput"
+            accept="image/*"
+        >
+
+        <div class="preview-container">
+            <img id="preview" alt="Uploaded rice image">
+        </div>
+
+        <button id="countBtn" class="count-btn">
+            COUNT CHEYYATTE? 🍚
+        </button>
+
+    </section>
+
+
+    <section id="loading" class="card loading-card hidden">
+
+        <div class="loading-rice">🍚</div>
+
+        <h2 id="loadingTitle">
+            Ari manikal interrogation-il aanu...
+        </h2>
+
+        <p id="loadingText">
+            Oru nimisham... serious investigation aanu. 🔍
+        </p>
+
+        <div class="loader">
+            <div class="loader-bar"></div>
+        </div>
+
+    </section>
+
+
+    <section id="result" class="card result-card hidden">
+
+        <div class="result-emoji">🍚</div>
+
+        <p class="result-label">
+            OFFICIAL CHOR REPORT
+        </p>
+
+        <div class="count-number">
+            <span id="grainCount">0</span>
+        </div>
+
+        <p class="grain-label">
+            ARI MANIKAL DETECTED
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="dialogue-box">
+
+            <span class="quote-mark">“</span>
+
+            <p id="dialogue">
+                Dialogue loading...
+            </p>
+
+            <span class="quote-mark right">”</span>
+
+        </div>
+
+        <p id="movieRef" class="movie-ref"></p>
+
+        <div class="stats">
+
+            <div class="stat">
+                <span>⏱️</span>
+                <strong id="timeWasted">0</strong>
+                <small>seconds wasted</small>
+            </div>
+
+            <div class="stat">
+                <span>🤡</span>
+                <strong id="tier">---</strong>
+                <small>uselessness tier</small>
+            </div>
+
+        </div>
+
+        <p id="message" class="wasted-message"></p>
+
+        <button id="againBtn" class="again-btn">
+            🔄 VEENDUM COUNT CHEYYAM
+        </button>
+
+    </section>
+
+
+    <footer>
+        <p>Made with ❤️, Python & unnecessary engineering.</p>
+        <p>🍚 No rice grains were harmed in this experiment.</p>
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
 
 </body>
 </html>
