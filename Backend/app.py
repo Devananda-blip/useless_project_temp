@@ -1,8 +1,7 @@
 import io
 import time
-import cv2
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
@@ -52,26 +51,61 @@ def get_malayalam_dialogue(count):
 
 def count_rice_grains(image_bytes):
     try:
-        pil_img = Image.open(io.BytesIO(image_bytes)).convert('RGB')
-        img = np.array(pil_img)
-        img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+        pil_img = Image.open(io.BytesIO(image_bytes)).convert('L')
     except Exception as e:
         print("Image Read Error:", e)
         return 0
 
-    if img is None:
-        return 0
+    # Resize for faster processing while keeping aspect
+    max_dim = 800
+    w, h = pil_img.size
+    if max(w, h) > max_dim:
+        scale = max_dim / max(w, h)
+        pil_img = pil_img.resize((int(w * scale), int(h * scale)))
 
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    blurred = cv2.GaussianBlur(gray, (5, 5), 0)
-    thresh = cv2.adaptiveThreshold(
-        blurred, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2
-    )
+    # Slight blur to reduce noise
+    pil_img = pil_img.filter(ImageFilter.GaussianBlur(radius=1))
+    arr = np.array(pil_img)
 
-    contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    valid_contours = [c for c in contours if 10 < cv2.contourArea(c) < 5000]
+    # Simple global threshold (works for most clear-background images)
+    thresh_val = arr.mean() + arr.std() * 0.2
+    bw = arr > thresh_val
 
-    return len(valid_contours)
+    # Connected-component labeling (stack-based flood fill)
+    h, w = bw.shape
+    visited = np.zeros((h, w), dtype=bool)
+    count = 0
+    min_area = 10
+    max_area = 5000
+
+    for y in range(h):
+        for x in range(w):
+            if bw[y, x] and not visited[y, x]:
+                # flood fill
+                stack = [(y, x)]
+                visited[y, x] = True
+                area = 0
+                while stack:
+                    cy, cx = stack.pop()
+                    area += 1
+                    # 4-neighbors
+                    if cy > 0 and bw[cy - 1, cx] and not visited[cy - 1, cx]:
+                        visited[cy - 1, cx] = True
+                        stack.append((cy - 1, cx))
+                    if cy + 1 < h and bw[cy + 1, cx] and not visited[cy + 1, cx]:
+                        visited[cy + 1, cx] = True
+                        stack.append((cy + 1, cx))
+                    if cx > 0 and bw[cy, cx - 1] and not visited[cy, cx - 1]:
+                        visited[cy, cx - 1] = True
+                        stack.append((cy, cx - 1))
+                    if cx + 1 < w and bw[cy, cx + 1] and not visited[cy, cx + 1]:
+                        visited[cy, cx + 1] = True
+                        stack.append((cy, cx + 1))
+
+                if min_area < area < max_area:
+                    count += 1
+
+    return count
 
 @app.route('/api/count', methods=['POST'])
 def count():
@@ -102,4 +136,6 @@ def count():
     })
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
