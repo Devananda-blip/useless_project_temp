@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rice Grain Counter 🍚</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🍚 Rice Grain Counter</h1>
+
+        <p>Because counting rice manually is apparently too much work.</p>
+
+        <div class="upload-box">
+
+            <h2>Upload Your Rice Image</h2>
+
+            <p class="upload-dialogue">
+                Don't worry.We won't judge you for your rice.            </p>
+
+            <input type="file" id="imageInput" accept="image/*">
+
+            <img id="preview" alt="Rice Preview">
+
+            <button id="countBtn">
+                Count Rice Grains 🍚
+            </button>
+
+        </div>
+
+        <div class="result" id="result">
+            <h2>Result</h2>
+            <p id="count">Your rice grains are waiting...</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
