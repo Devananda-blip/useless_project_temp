@@ -1,163 +1,151 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Rice Count™ 🍚</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choru Count™ 🍚</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<link rel="stylesheet" href="style.css">
-
-</head><body><div class="rice-bg">
-    🍚　🍚　🍚　🍚　🍚　🍚
-</div>
-
-<main class="container">
-
-    <div class="hero">
-
-        <div class="logo">🍚</div>
-
-        <h1>RICE COUNT™</h1>
-
-        <div class="badge">
-            ⚠️ Totally Unnecessary Technology
-        </div>
-
-        <p class="tagline">
-            Aarum chodichilla.<br>
-            Ennalum njangal undakki. 😭
-        </p>
-
-        <p class="subtext">
-            <span>“Rice undo?”</span>
-            <span>“Und.”</span>
-            <span>“Enna count cheyyam.” 🍚</span>
-        </p>
-
+    <!-- Floating Meme Characters with Rice Counter Dialogues -->
+    <div class="floating-character char-top-left">
+        <img src="images/nagavalli.png" alt="Nagavalli">
+        <div class="speech-bubble">"Vidamaatte! Ennikku da ari!" 👻🍚</div>
     </div>
 
+    <div class="floating-character char-top-right">
+        <img src="images/vijay.png" alt="Vijay">
+        <div class="speech-bubble">"I'm waiting for the count, machi! ⚡"</div>
+    </div>
 
-    <section class="card upload-card">
+    <div class="floating-character char-bottom-left">
+        <img src="images/ashokan.png" alt="Ashokan">
+        <div class="speech-bubble">"Muthalaali... Ithil kooduthal ari tharumo? 😭"</div>
+    </div>
 
-        <h2>📸 Rice nte Photo Idu</h2>
+    <div class="floating-character char-bottom-right">
+        <img src="images/mammootty.png" alt="Mammootty">
+        <div class="speech-bubble">"CBI inspection: Count accurate aano? 🕵️‍♂️"</div>
+    </div>
 
-        <p class="small-text">
-            Pedikkanda... njangal judge cheyyilla. 👀
-        </p>
+    <div class="rice-bg">
+        🍚　🍚　🍚　🍚　🍚　🍚
+    </div>
 
-        <label for="imageInput" class="upload-area">
+    <main class="container">
 
-            <div class="upload-icon">📷</div>
-
-            <h3>Choose Your Rice</h3>
-
-            <p>Click here to upload a rice image</p>
-
-            <span class="choose-btn">
-                SELECT RICE 🍚
-            </span>
-
-        </label>
-
-        <input
-            type="file"
-            id="imageInput"
-            accept="image/*"
-        >
-
-        <div class="preview-container">
-            <img id="preview" alt="Uploaded rice image">
+        <div class="hero">
+            <div class="logo">🍚</div>
+            <h1>CHORU COUNT™</h1>
+            <div class="badge">
+                ⚠️ Totally Unnecessary Technology
+            </div>
+            <p class="tagline">
+                Aarum chodichilla.<br>
+                Ennalum njangal undakki. 😭
+            </p>
+            <p class="subtext">
+                <span>“Chor undo?”</span>
+                <span>“Und.”</span>
+                <span>“Enna count cheyyam.” 🍚</span>
+            </p>
         </div>
 
-        <button id="countBtn" class="count-btn">
-            COUNT CHEYYATTE? 🍚
-        </button>
-
-    </section>
-
-
-    <section id="loading" class="card loading-card hidden">
-
-        <div class="loading-rice">🍚</div>
-
-        <h2 id="loadingTitle">
-            Ari manikal interrogation-il aanu...
-        </h2>
-
-        <p id="loadingText">
-            Oru nimisham... serious investigation aanu. 🔍
-        </p>
-
-        <div class="loader">
-            <div class="loader-bar"></div>
-        </div>
-
-    </section>
-
-
-    <section id="result" class="card result-card hidden">
-
-        <div class="result-emoji">🍚</div>
-
-        <p class="result-label">
-            OFFICIAL RICE REPORT
-        </p>
-
-        <div class="count-number">
-            <span id="grainCount">0</span>
-        </div>
-
-        <p class="grain-label">
-            ARI MANIKAL DETECTED
-        </p>
-
-        <div class="divider"></div>
-
-        <div class="dialogue-box">
-
-            <span class="quote-mark">“</span>
-
-            <p id="dialogue">
-                Dialogue loading...
+        <section class="card upload-card">
+            <h2>📸 Chorinte Photo Idu</h2>
+            <p class="small-text">
+                Pedikkanda... njangal judge cheyyilla. 👀
             </p>
 
-            <span class="quote-mark right">”</span>
+            <label for="imageInput" class="upload-area">
+                <div class="upload-icon">📷</div>
+                <h3>Choose Your Chor</h3>
+                <p>Click here to upload a rice image</p>
+                <span class="choose-btn">
+                    SELECT RICE 🍚
+                </span>
+            </label>
 
-        </div>
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+            >
 
-        <p id="movieRef" class="movie-ref"></p>
-
-        <div class="stats">
-
-            <div class="stat">
-                <span>⏱️</span>
-                <strong id="timeWasted">0</strong>
-                <small>seconds wasted</small>
+            <div class="preview-container">
+                <img id="preview" alt="Uploaded rice image">
             </div>
 
-            <div class="stat">
-                <span>🤡</span>
-                <strong id="tier">---</strong>
-                <small>uselessness tier</small>
+            <button id="countBtn" class="count-btn">
+                COUNT CHEYYATTE? 🍚
+            </button>
+        </section>
+
+        <section id="loading" class="card loading-card hidden">
+            <div class="loading-rice">🍚</div>
+            <h2 id="loadingTitle">
+                Ari manikal interrogation-il aanu...
+            </h2>
+            <p id="loadingText">
+                Oru nimisham... serious investigation aanu. 🔍
+            </p>
+            <div class="loader">
+                <div class="loader-bar"></div>
+            </div>
+        </section>
+
+        <section id="result" class="card result-card hidden">
+            <div class="result-emoji">🍚</div>
+            <p class="result-label">
+                OFFICIAL CHOR REPORT
+            </p>
+            <div class="count-number">
+                <span id="grainCount">0</span>
+            </div>
+            <p class="grain-label">
+                ARI MANIKAL DETECTED
+            </p>
+            <div class="divider"></div>
+
+            <div class="dialogue-box">
+                <span class="quote-mark">“</span>
+                <p id="dialogue">
+                    Dialogue loading...
+                </p>
+                <span class="quote-mark right">”</span>
             </div>
 
-        </div>
+            <p id="movieRef" class="movie-ref"></p>
 
-        <p id="message" class="wasted-message"></p>
+            <div class="stats">
+                <div class="stat">
+                    <span>⏱️</span>
+                    <strong id="timeWasted">0</strong>
+                    <small>seconds wasted</small>
+                </div>
+                <div class="stat">
+                    <span>🤡</span>
+                    <strong id="tier">---</strong>
+                    <small>uselessness tier</small>
+                </div>
+            </div>
 
-        <button id="againBtn" class="again-btn">
-            🔄 VEENDUM COUNT CHEYYAM
-        </button>
+            <p id="message" class="wasted-message"></p>
 
-    </section>
+            <button id="againBtn" class="again-btn">
+                🔄 VEENDUM COUNT CHEYYAM
+            </button>
+        </section>
 
+        <footer>
+            <p>Made with ❤️, Python & unnecessary engineering.</p>
+            <p>🍚 No rice grains were harmed in this experiment.</p>
+        </footer>
 
-    <footer>
-        <p>Made with ❤️, Python & unnecessary engineering.</p>
-        <p>🍚 No rice grains were harmed in this experiment.</p>
-    </footer>
+    </main>
 
-</main>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
