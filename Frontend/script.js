@@ -19,7 +19,7 @@ const loadingText = document.getElementById("loadingText");
 
 const loadingMessages = [
 ["Ari manikal interrogation-il aanu... 🔍", "Oru nimisham... serious investigation aanu."],
-["Chorine chodhyam cheyyunnu... 🍚", "Aarum disturb cheyyaruthu."],
+["Rice ne chodhyam cheyyunnu... 🍚", "Aarum disturb cheyyaruthu."],
 ["Ithrem ari enthina? 😭", "Njangalkkum ariyilla."],
 ["Count cheythondirikkunnu...", "Engineering at its finest. 💀"]
 ];
@@ -46,7 +46,7 @@ countBtn.addEventListener("click", async function () {
 const file = imageInput.files[0];
 
 if (!file) {
-    alert("Aadyam chorinte photo upload cheyyu! 🍚😭");
+    alert("Aadyam rice nte photo upload cheyyu! 🍚😭");
     return;
 }
 
