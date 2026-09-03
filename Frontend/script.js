@@ -69,7 +69,7 @@ formData.append("image", file);
 
 try {
 
-    const response = await fetch("http://localhost:5000/api/count", {
+    const response = await fetch("https://rice-counter-dkud.onrender.com, {
         method: "POST",
         body: formData
     });
