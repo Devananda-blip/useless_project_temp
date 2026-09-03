@@ -24,6 +24,9 @@ const loadingMessages = [
 ["Count cheythondirikkunnu...", "Engineering at its finest. 💀"]
 ];
 
+// Backend base URL (Render deployment)
+const BACKEND_URL = "https://rice-counter.onrender.com";
+
 imageInput.addEventListener("change", function () {
 
 const file = this.files[0];
@@ -69,7 +72,7 @@ formData.append("image", file);
 
 try {
 
-    const response = await fetch("http://localhost:5000/api/count", {
+    const response = await fetch(`${BACKEND_URL}/api/count`, {
         method: "POST",
         body: formData
     });
