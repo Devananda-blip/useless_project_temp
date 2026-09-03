@@ -2,34 +2,33 @@
 
 
 
-# [Project Name] 🎯
+# [RICE COUNTER] 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: [LOGIC EVDE!]
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: [DEVANANDA TS] - [LBS INSTITUTE OF TECHNOLOGY POOJAPPURA]
+- Member 2: [ARADHANA PS] - [LBS INSTITUTE OF TECHNOLOGY POOJAPPURA]
 
 ### Project Description
-[2-3 lines about what your project does]
+["RICE COUNT" is a fun computer vision project that uses opencv and python to detect and count rice grains from an uploaded image.]
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+[How can we automatically count the number of rice grains in an image without counting them manually?]
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+[An image based system that automatically detects and counts individual rice grains using computer vision]
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- [Languages:Python,HTNL,CSS,JavaScript]
+- [Frameworks:Flask]
+- [Libraries:OpenCV,NumPy,Pillow(PIL),Flask-CORS]
+- [Tools:VS Code,Git,GitHub]
 
 For Hardware:
 - [List main components]
@@ -37,29 +36,61 @@ For Hardware:
 - [List tools required]
 
 ### Implementation
-For Software:
+For Software:Upload rice image,Image processing using openCV,Detect rice grains,count grains,display count
 # Installation
-[commands]
+[commands:pip install flask
+pip install flask-cors
+pip install opencv-python
+pip install numpy
+pip install pillow]
 
 # Run
-[commands]
+[commands:cd Backend
+python app.py]
 
 ### Project Documentation
-For Software:
+For Software:<video controls src="WhatsApp Video 2026-09-04 at 3.38.03 AM.mp4" title="Title"></video>
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot1]STAGE 1(![alt text](IMG_20260904_034100274.jpg.jpeg)
+*Rice count application main landing page interface*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2]STAGE 2![alt text](IMG_20260904_034105387.jpg-1.jpeg)
+*Rice grain image uploaded and ready for processing*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot3]STAGE 3![alt text](IMG_20260904_034117451.jpg.jpeg)))
+*Official rice report showing 713 rice grains detected*
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+![Workflow]📸 START
+           │
+           ▼
+   Upload Rice Image
+           │
+           ▼
+     Image Processing
+       (OpenCV)
+           │
+           ▼
+    Detect Rice Grains
+           │
+           ▼
+      Count Grains
+           │
+           ▼
+   Generate Result
+     ┌─────┴─────┐
+     ▼           ▼
+🍚 Grain Count   😂 Funny
+                Malayalam
+                Dialogue
+     └─────┬─────┘
+           ▼
+      Display Result
+           │
+           ▼
+          END
+
 
 For Hardware:
 
@@ -83,15 +114,15 @@ For Hardware:
 ### Project Demo
 # Video
 [Add your demo video link here]
+<video controls src="WhatsApp Video 2026-09-04 at 3.38.03 AM-1.mp4" title="Title"></video>
 *Explain what the video demonstrates*
 
 # Additional Demos
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- [DEVANANDA TS]: [BACKEND DEVELOPMENT]
+- [ARADHANA PS]: [FRONTEND DEVELOPMENT]
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
