@@ -62,34 +62,22 @@ For Software:<video controls src="WhatsApp Video 2026-09-04 at 3.38.03 AM.mp4" t
 *Official rice report showing 713 rice grains detected*
 
 # Diagrams 
-![Workflow]📸 START
-           │
-           ▼
-   Upload Rice Image
-           │
-           ▼
-     Image Processing
-       (OpenCV)
-           │
-           ▼
-    Detect Rice Grains
-           │
-           ▼
-      Count Grains
-           │
-           ▼
-   Generate Result
-     ┌─────┴─────┐
-     ▼           ▼
-🍚 Grain Count   😂 Funny
-                Malayalam
-                Dialogue
-     └─────┬─────┘
-           ▼
-      Display Result
-           │
-           ▼
-          END
+
+          START
+   ↓
+Upload Rice Image
+   ↓
+Image Processing (OpenCV)
+   ↓
+Detect Rice Grains
+   ↓
+Count Rice Grains
+   ↓
+Generate Result & Funny Malayalam Dialogue
+   ↓
+Display Result
+   ↓
+🏁 END
 
 
 For Hardware:
