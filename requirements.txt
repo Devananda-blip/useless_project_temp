@@ -1,2 +1,0 @@
--- This top-level requirements.txt points to the backend requirements
--r Backend/requirements.txt
