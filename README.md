@@ -61,7 +61,7 @@ For Software:<video controls src="WhatsApp Video 2026-09-04 at 3.38.03 AM.mp4" t
 ![Screenshot3]STAGE 3![alt text](IMG_20260904_034117451.jpg.jpeg)))
 *Official rice report showing 713 rice grains detected*
 
-# Diagrams
+# Diagrams 
 ![Workflow]📸 START
            │
            ▼
@@ -113,9 +113,15 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-<video controls src="WhatsApp Video 2026-09-04 at 3.38.03 AM-1.mp4" title="Title"></video>
-*Explain what the video demonstrates*
+[https://drive.google.com/file/d/1VIIgQ2961hT2BYBexi34jHFVPU_AM1zd/view?usp=sharing]
+
+*It shows how:
+📸 An image can be uploaded through a web interface
+🔍 OpenCV can process and analyze the image
+🍚 Individual rice grains can be detected using image segmentation and contour detection
+🔢 The detected grains can be automatically counted
+🤖 Python + Flask can connect the image-processing backend with the frontend
+😂 The system can generate different Malayalam responses based on the grain count*
 
 # Additional Demos
 [Add any extra demo materials/links]
